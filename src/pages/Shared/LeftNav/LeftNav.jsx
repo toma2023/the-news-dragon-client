@@ -9,8 +9,8 @@ const LeftNav = () => {
     useEffect(() => {
         fetch('http://localhost:5000/categories')
             .then(res => res.json())
-            .then(data => console.log(data))
-            .catch(error => setCategories(error))
+            .then(data => setCategories(data))
+            .catch(error => console.error(error))
     }, [])
 
     return (
